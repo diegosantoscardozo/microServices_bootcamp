@@ -22,13 +22,15 @@ public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
         return RestClients.create(clientConfiguration).rest();
     }
 
-   @Bean
-   @Override
-   public EntityMapper entityMapper() {
-       ElasticsearchEntityMapper entityMapper = new ElasticsearchEntityMapper(elasticsearchMappingContext(),
-               new DefaultConversionService());
-       entityMapper.setConversions(elasticsearchCustomConversions());
-
-       return entityMapper;
-   }
+    
+    //TODO - CONFIG cod comentado
+//   @Bean
+//   @Override
+//   public EntityMapper entityMapper() {
+//       ElasticsearchEntityMapper entityMapper = new ElasticsearchEntityMapper(elasticsearchMappingContext(),
+//               new DefaultConversionService());
+//       entityMapper.setConversions(elasticsearchCustomConversions());
+//
+//       return entityMapper;
+//   }
 }
